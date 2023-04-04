@@ -46,14 +46,16 @@
   <main class="main-container">
     <section class="promo-form">
       <h1 class="visually-hidden">Седона</h1>
-      <img class="promo-form__logo" src="img/sedona-logo-catalog.svg" width="460" height="80" alt="SEDONA">
+      <img class="promo-form__logo" src="img/sedona-logo-catalog.svg" width="230" height="40" alt="SEDONA">
     </section>
-    <section class="review">
-      <h2 class="review__title">Оставьте свой отзыв</h2>
-      <p class="review__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
-        достопримечательностях</p>
-
-    </section>
+    <div class="slogan">
+      <header class="slogan__header">
+        <h2 class="slogan__title">Оставьте свой отзыв</h2>
+        <p class="slogan__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+          вами
+          достопримечательностях</p>
+      </header>
+    </div>
     <section class="review-form">
       <h2 class="visually-hidden">Форма отзыва</h2>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
@@ -91,7 +93,7 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label">
-                <input class="form__input form__input--checked" type="radio" name="feedback" value="positive" checked>
+                <input class="form__input form__input" type="radio" name="feedback" value="positive" checked>
                 <span class="form__text">Скорее положительное</span>
               </label>
             </li>
@@ -114,19 +116,19 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label">
-                <input class="form__input form__input--checked" type="checkbox" name="bridge" checked>
+                <input class="form__input form__input" type="checkbox" name="bridge" checked>
                 <span class="form__text">Мост дьявола</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__label">
-                <input class="form__input form__input--checked" type="checkbox" name="mountain" checked>
+                <input class="form__input form__input" type="checkbox" name="mountain" checked>
                 <span class="form__text">Гора-колокол</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__label">
-                <input class="form__input form__input--checked" type="checkbox" name="slide-park" checked>
+                <input class="form__input form__input" type="checkbox" name="slide-park" checked>
                 <span class="form__text">Слайд-парк</span>
               </label>
             </li>
@@ -144,19 +146,9 @@
             <textarea class="form__input" name="feelings" placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
-        <button class="button form__button form__button--check" type="submit">Отправить отзыв</button>
+        <button class="button form__button" type="submit">Отправить отзыв</button>
         <span class="form__tooltip">*-Обязательное поле</span>
       </form>
-      <div class="modal modal-error">
-        <h2 class="modal-error__title"> Что-то пошло не так! </h2>
-        <p class="modal-error__description"> Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить </p>
-        <button class="modal-error__button button" type="button">ОК</button>
-      </div>
-      <div class="modal modal-success">
-        <h2 class="modal-success__title"> Ваш отзыв отправлен! </h2>
-        <p class="modal-success__description"> Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте. </p>
-        <button class="modal-success__button button" type="button">Закрыть окно</button>
-      </div>
     </section>
   </main>
 
@@ -193,4 +185,15 @@
       </div>
     </div>
   </footer>
+  <div class="modal modal--error">
+    <h2 class="modal__title"> Что-то пошло не так! </h2>
+    <p class="modal__description"> Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить </p>
+    <button class="modal__button button" type="button">ОК</button>
+  </div>
+  <div class="modal modal--success">
+    <h2 class="modal__title"> Ваш отзыв отправлен! </h2>
+    <p class="modal__description"> Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы
+      опубликуем его на сайте. </p>
+    <button class="modal__button button" type="button">Закрыть окно</button>
+  </div>
 </body>
