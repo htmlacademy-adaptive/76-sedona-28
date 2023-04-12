@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -18,22 +19,22 @@
       <div class="main-navigation__wrapper">
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a href="index.html">
+            <a class="main-navigation__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-navigation__item main-navigation__item--current">
-            <a>
+            <a class="main-navigation__link main-navigation__link--current">
               Фото и видео
             </a>
           </li>
           <li class="main-navigation__item">
-            <a href="form.html">
+            <a class="main-navigation__link" href="form.html">
               Форма отзыва
             </a>
           </li>
           <li class="main-navigation__item">
-            <a href="#">
+            <a class="main-navigation__link" href="#">
               HTMLACADEMY
             </a>
           </li>
@@ -43,7 +44,7 @@
     </nav>
   </header>
   <main class="main-container">
-    <section class="promo-catalog">
+    <section class="promo promo--inner">
       <h1 class="visually-hidden">Седона</h1>
       <img class="promo-catalog__logo" src="img/sedona-logo-catalog.svg" width="230" height="40" alt="SEDONA">
     </section>
@@ -109,7 +110,7 @@
       <p class="movie__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
         раз!</p>
       <img class="movie__photo" src="img/movie-mobile.jpg" width="280" height="176" alt="Обложка ролика про Седону">
-      <button class="button movie__button" type="button">
+      <button class="movie__button" type="button">
         <span class="visually-hidden">Воспроизвести</span>
       </button>
     </section>
