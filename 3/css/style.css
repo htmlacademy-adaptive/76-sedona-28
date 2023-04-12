@@ -13,8 +13,8 @@
   font-display: swap;
 }
 body {
-  background-color: #b7b4b4;
-  color: #ffffff;
+  background-color: #f2f2f2;
+  color: #000000;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -41,8 +41,8 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
 }
 .main-navigation__list {
@@ -155,8 +155,8 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 21px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -238,6 +238,14 @@ body {
   color: #000000;
 }
 .form__input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+.form__input::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
