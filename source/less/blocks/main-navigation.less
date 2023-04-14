@@ -9,6 +9,8 @@
 
 .main-navigation__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   background-color: @color-bg-blue;
 }
 
@@ -16,4 +18,46 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @color-white;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__wrapper {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    justify-content: space-between;
+    background-color: @color-white;
+  }
+
+  .main-navigation__link {
+    color: @color-title;
+  }
+
+  .main-navigation__link--current {
+    color: @color-nav-link-current;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-navigation__wrapper {
+    width: 1020px;
+    margin: 0 auto;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    justify-content: space-between;
+    background-color: @color-white;
+  }
+
+  .main-navigation__link {
+    color: @color-title;
+  }
+
+  .main-navigation__link--current {
+    color: @color-nav-link-current;
+  }
 }

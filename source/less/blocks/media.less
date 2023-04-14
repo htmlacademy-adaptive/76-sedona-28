@@ -31,3 +31,33 @@
   line-height: 21px;
   color: @color-title;
 }
+
+@media (min-width: @tablet-width) {
+  .media__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .media__photo {
+    width: 324px;
+  }
+
+  .media__photo--sunrise {
+    width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .media__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .media__photo {
+    width: 400px;
+  }
+
+  .media__photo--sunrise {
+    width: 1200px;
+  }
+}

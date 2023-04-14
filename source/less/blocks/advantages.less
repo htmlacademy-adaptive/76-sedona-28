@@ -1,8 +1,105 @@
 .advantages__list {
   padding: 0;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__wrapper-picture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__wrapper-nopicture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item--nopicture {
+    max-width: 256px;
+  }
+
+  .advantages__promo {
+    max-width: 256px;
+  }
+
+
+  .advantages__image-city {
+    width: 512px;
+  }
+
+  .advantages__image-bridge {
+    width: 512px;
+  }
+
+  .advantages__list-bonus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item-bonus {
+    max-width: 256px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__wrapper-picture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__wrapper-nopicture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item--nopicture {
+    max-width: 400px;
+  }
+
+  .advantages__promo {
+    max-width: 400px;
+  }
+
+
+  .advantages__image-city {
+    width: 800px;
+  }
+
+  .advantages__image-bridge {
+    width: 800px;
+  }
+
+  .advantages__list-bonus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item-bonus {
+    max-width: 400px;
+  }
 }
 
 .advantages__promo {
@@ -25,10 +122,12 @@
   line-height: 26px;
 }
 
-.advantages__item-bonus {
+.advantages__list-bonus {
   background-color: @color-white;
   color: @color-description;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .advantages__item--nopicture {
