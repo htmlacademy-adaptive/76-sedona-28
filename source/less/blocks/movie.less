@@ -1,5 +1,6 @@
 .movie {
   background-color: @color-white;
+  padding: 0 20px;
 }
 
 .movie__title {
@@ -17,12 +18,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .movie {
+    padding: 0 60px;
+  }
+
   .movie__photo {
     width: 648px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .movie {
+    padding: 200px;
+  }
+
   .movie__photo {
     width: 800px;
   }

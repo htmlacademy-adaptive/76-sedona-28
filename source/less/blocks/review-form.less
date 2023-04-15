@@ -49,14 +49,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    padding: 0 60px;
+  }
+
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .form__fieldset {
+  .form__fieldset--info {
     display: flex;
     flex-direction: column;
+    max-width: 296px;
   }
 
   .form__list {
@@ -77,6 +82,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    padding: 0 120px;
+  }
+
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
