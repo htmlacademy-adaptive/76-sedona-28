@@ -13,3 +13,25 @@
 .hotel-search__description {
   color: @color-description;
 }
+
+@media (min-width: @tablet-width) {
+  .hotel-search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hotel-search__map {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotel-search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hotel-search__map {
+    width: 1200px;
+  }
+}

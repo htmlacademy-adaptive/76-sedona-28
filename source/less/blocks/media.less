@@ -1,6 +1,7 @@
 .media__list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px;
+  background-color: @color-white;
 }
 
 .media__item {
@@ -30,4 +31,36 @@
   font-size: 14px;
   line-height: 21px;
   color: @color-title;
+}
+
+@media (min-width: @tablet-width) {
+  .media__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  .media__photo {
+    width: 324px;
+  }
+
+  .media__photo--sunrise {
+    width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .media__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .media__photo {
+    width: 400px;
+  }
+
+  .media__photo--sunrise {
+    width: 1200px;
+  }
 }
