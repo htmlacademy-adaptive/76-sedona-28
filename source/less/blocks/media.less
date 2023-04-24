@@ -1,7 +1,8 @@
 .media__list {
   list-style: none;
-  padding: 0 20px;
+  padding: 24px 20px;
   background-color: @color-white;
+  margin: 0;
 }
 
 .media__item {
@@ -16,12 +17,16 @@
   line-height: 21px;
   color: @color-title;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .media__author-title {
   color: @color-description;
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 .media__like-counter {
@@ -31,7 +36,24 @@
   font-size: 14px;
   line-height: 21px;
   color: @color-title;
+  margin-bottom: 25px;
+  padding-left: 35px;
+  display: block;
+  position: relative;
 }
+
+.media__like-counter::before {
+  position: absolute;
+  background-image: url("../img/like-counter.svg");
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 3px;
+  width: 23px;
+  height: 21px;
+  padding: 10px 10px;
+  content: "";
+}
+
 
 @media (min-width: @tablet-width) {
   .media__list {

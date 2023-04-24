@@ -1,10 +1,14 @@
 .movie {
   background-color: @color-white;
   padding: 0 20px;
+  position: relative;
 }
 
 .movie__title {
   .mixin-title();
+  margin: 0;
+  text-align: center;
+  padding-bottom: 36px;
 }
 
 .movie__description {
@@ -15,6 +19,25 @@
   line-height: 21px;
   text-transform: uppercase;
   color: @color-description;
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 6px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.movie__button{
+  background-image: url("../img/play-button.svg");
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 54px;
+  position: absolute;
+  border: none;
+  z-index: 2;
+
 }
 
 @media (min-width: @tablet-width) {

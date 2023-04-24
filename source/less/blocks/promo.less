@@ -5,22 +5,36 @@
 }
 
 .promo {
-  background-image: url("../img/main-promo.jpg");
+  background-image: url("../img/mobile-divider.svg"), url("../img/main-promo.jpg");
+  background-position: bottom -167px center, center;
   background-repeat: no-repeat;
   background-size: 320px 390px;
+  padding: 86px 19px 85px 19px;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    background-size: 768px 390px;
+    background-image: url("../img/tablet-divider.svg"), url("../img/main-promo.jpg");
+    background-position: bottom -232px center, center;
+    background-size: 768px 518px;
+    padding: 70px 154px 91px 154px;
   }
   .promo__logo{
-    text-align: center;
+    width: 461px;
+    height: 350px;
   }
+
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    background-size: 1200px 390px;
+    background-image: url("../img/desktop-divider.svg"), url("../img/main-promo.jpg");
+    background-position: bottom -230px center, center;
+    background-size: 1200px 518px;
+    padding: 74px 370px 90px 370px;
+  }
+  .promo__logo{
+    width: 461px;
+    height: 350px;
   }
 }
