@@ -2,8 +2,89 @@
   background-color: @color-white;
 }
 
+.form__fieldset {
+  border: none;
+}
+
+.form__fieldset--info {
+  padding-bottom: 64px;
+}
+
 .form__title {
   .mixin-title();
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.form__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__text {
+  padding-left: 16px;
+}
+
+.form__input {
+  background-color: @color-bg-grey;
+  border: none;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+}
+
+.form__input-radio[type="radio"]:checked + .form__control-mark::before {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: @color-description;
+  border-radius: 50%;
+  content: "";
+}
+
+.form__input-checkbox[type="checkbox"]:checked + .form__control-mark-checkbox::before {
+  position: absolute;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 16px;
+  top: 4px;
+  left: 4px;
+  content: "";
+}
+.form__control-mark-checkbox{
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  background-color: @color-checkbox;
+}
+.form__control-mark {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border: none;
+  border-radius: 50%;
+  background-color: @color-checkbox;
+
+}
+.form__item{
+  padding-bottom: 16px;
 }
 
 .form__text {
@@ -46,6 +127,33 @@
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
+  padding-left: 16px;
+}
+
+.form__icon--phone {
+  background-image: url("../img/phone-icon.svg");
+  width: 58px;
+  height: 58px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 197px;
+}
+
+.form__icon--email {
+  background-image: url("../img/mail-icon.svg");
+  width: 58px;
+  height: 58px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 197px;
+}
+
+.form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px 0 20px;
 }
 
 @media (min-width: @tablet-width) {

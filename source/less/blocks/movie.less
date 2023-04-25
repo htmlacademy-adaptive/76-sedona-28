@@ -26,7 +26,7 @@
   margin-bottom: 38px;
 }
 
-.movie__button{
+.movie__button {
   background-image: url("../img/play-button.svg");
   background-color: rgba(255, 255, 255, 0.7);
   bottom: 70px;
@@ -47,15 +47,44 @@
 
   .movie__photo {
     width: 648px;
+    height: 500px;
+    margin-bottom: 40px;
+  }
+
+  .movie__title {
+    font-family: @main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .movie__description {
+    padding: 0 136px 66px 136px;
+    margin: 0;
+  }
+
+  .movie__button {
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+
   }
 }
 
 @media (min-width: @desktop-width) {
   .movie {
-    padding: 200px;
+    padding: 0;
+    padding-top: 62px;
+  }
+  .movie__description {
+    padding: 0 376px 64px 376px;
+    margin: 0;
   }
 
   .movie__photo {
-    width: 800px;
+    width: 1200px;
+    padding: 0 200px 84px 200px;
+    margin: 0;
   }
 }
