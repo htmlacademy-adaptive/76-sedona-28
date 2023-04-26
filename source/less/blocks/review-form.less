@@ -4,17 +4,23 @@
 
 .form__fieldset {
   border: none;
+  margin: 0;
+  padding-bottom: 49px;
 }
 
 .form__fieldset--info {
   padding-bottom: 64px;
 }
 
+.form__fieldset--contact {
+  padding-bottom: 59px;
+}
+
 .form__title {
   .mixin-title();
   text-align: center;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
 }
 
 .form__wrapper {
@@ -24,10 +30,8 @@
 
 .form__label {
   position: relative;
-}
-
-.form__text {
-  padding-left: 16px;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .form__input {
@@ -36,60 +40,71 @@
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-bottom: 16px;
-
 }
 
-.form__input-radio[type="radio"]:checked + .form__control-mark::before {
+.form__label:last-child {
+  margin-bottom: 0;
+}
+
+.form__input-radio[type="radio"]:checked+.form__control-mark::before {
   position: absolute;
-  top: 6px;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   background-color: @color-description;
   border-radius: 50%;
   content: "";
 }
 
-.form__input-checkbox[type="checkbox"]:checked + .form__control-mark-checkbox::before {
+.form__input-checkbox[type="checkbox"]:checked+.form__control-mark-checkbox::before {
   position: absolute;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   width: 22px;
   height: 16px;
-  top: 4px;
-  left: 4px;
+  top: 12px;
+  left: 12px;
   content: "";
 }
-.form__control-mark-checkbox{
+
+.form__control-mark-checkbox {
   position: absolute;
   top: -4px;
   left: 0;
-  width: 28px;
-  height: 28px;
+  width: 46px;
+  height: 46px;
   border: none;
   border-radius: 4px;
   background-color: @color-checkbox;
 }
+
 .form__control-mark {
   position: absolute;
-  top: -4px;
+  top: -14px;
   left: 0;
-  width: 23px;
-  height: 23px;
+  width: 46px;
+  height: 46px;
   border: none;
   border-radius: 50%;
   background-color: @color-checkbox;
 
 }
-.form__item{
-  padding-bottom: 16px;
+
+.form__item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 16px
+}
+.form__item:last-child {
+  margin-bottom: 0;
 }
 
 .form__text {
   color: @color-description;
   text-transform: uppercase;
+  padding-left: 16px;
 }
 
 .form__tooltip {
@@ -109,6 +124,7 @@
   line-height: 26px;
   text-transform: capitalize;
   color: @color-title;
+  padding-left: 39px;
 }
 
 .form__input {
