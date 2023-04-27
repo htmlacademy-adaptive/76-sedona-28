@@ -6,6 +6,7 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+  min-height: 56px;
 }
 
 .main-navigation__list {
@@ -13,7 +14,6 @@
   margin: 0;
   padding: 0;
   background-color: @color-bg-blue;
-
 }
 
 .main-navigation__link {
@@ -23,7 +23,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @color-white;
-  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .main-navigation__toggle {
@@ -31,7 +31,7 @@
   width: 23px;
   height: 22px;
   top: 10px;
-  right: 10px;
+  right: 12px;
   display: block;
   cursor: pointer;
   border: none;
@@ -47,7 +47,20 @@
   height: 4px;
   background-color: @color-bg-blue;
   box-shadow: 0 9px 0 0 @color-bg-blue, 0 18px 0 0 @color-bg-blue;
+}
 
+.main-navigation--closed .main-navigation__toggle:hover {
+  &::before {
+    background-color: @open-toggle;
+    box-shadow: 0 9px 0 0 @open-toggle, 0 18px 0 0 @open-toggle;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle:active {
+  &::before {
+    background-color: @close-toggle;
+    box-shadow: 0 9px 0 0 @close-toggle, 0 18px 0 0 @close-toggle;
+  }
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -58,7 +71,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 14px;
     left: 0;
     width: 22px;
     height: 4px;
@@ -75,10 +88,46 @@
   }
 }
 
-@media (max-width: @mobile-width-only) {
-  .main-navigation--closed .main-navigation__item {
-    display: none;
+.main-navigation--opened .main-navigation__toggle:hover {
+  &::before,
+  &::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
 
+.main-navigation--opened .main-navigation__toggle:active {
+  &::before,
+  &::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+
+  .main-navigation__link:hover {
+    background-color: @button-hover;
+  }
+
+  .main-navigation__link:active {
+    background-color: @button-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.main-navigation--nojs {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__list {
+    @media (max-width: @mobile-width-only) {
+      display: block;
+      position: static;
+    }
   }
 }
 
@@ -97,7 +146,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: @color-white;
-    height: 56px;
     width: 720px;
   }
 

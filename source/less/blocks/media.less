@@ -1,6 +1,6 @@
 .media__list {
   list-style: none;
-  padding: 24px 20px;
+  padding: 24px 20px 0 20px;
   background-color: @color-white;
   margin: 0;
 }
@@ -36,7 +36,6 @@
   font-size: 14px;
   line-height: 21px;
   color: @color-title;
-  margin-bottom: 25px;
   padding-left: 35px;
   display: block;
   position: relative;
@@ -54,38 +53,49 @@
   content: "";
 }
 
+@media (max-width: @mobile-width-only) {
+  .media__item {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .media__item::before {
+    content: "";
+    position: absolute;
+    border: solid 1px @color-bg-grey;
+    width: 320px;
+    top: -30px;
+    left: -20px;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .media__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 60px;
+    padding: 0 60px 58px;
   }
 
   .media__photo {
     width: 324px;
-
   }
 
   .media__photo--sunrise {
     width: 648px;
   }
+
   .media__item-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .media__like-counter {
-    margin: 0;
-  }
-  .media__item-wrapper{
     background-color: @color-bg-grey;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .media__list {
-    padding-bottom: 58px;
+
+  .media__like-counter {
+    margin: 0;
   }
 }
 
@@ -105,11 +115,13 @@
     width: 1200px;
     height: 400px;
   }
+
   .media__item {
     position: relative;
   }
+
   .media__item-wrapper {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
@@ -117,19 +129,24 @@
     left: 0;
     width: 100%;
   }
-  .media__item-description{
+
+  .media__item-description {
     padding-top: 22px;
     padding-bottom: 15px;
   }
+
   .media__photo-description {
     color: @color-white;
   }
+
   .media__author-title {
     color: @color-white;
   }
+
   .media__like-counter {
     color: @color-white;
   }
+
   .media__like-counter::before {
     position: absolute;
     background-image: url("../img/like-icon-desktop.svg");

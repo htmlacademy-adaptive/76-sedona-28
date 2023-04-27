@@ -32,6 +32,7 @@
 .copyright__text {
   margin: 0;
   padding: 0;
+  padding-right: 8px;
 }
 
 .social__list {
@@ -70,6 +71,38 @@
   padding: 15px 24px;
 }
 
+.social__link--vkontakte:hover {
+  background-image: url("../img/vk-hover.svg");
+}
+
+.social__link--telegram:hover {
+  background-image: url("../img/telegram-hover.svg");
+}
+
+.social__link--youtube:hover {
+  background-image: url("../img/youtube-hover.svg");
+}
+
+.social__link--vkontakte:active {
+  background-image: url("../img/vk-active.svg");
+}
+
+.social__link--telegram:active {
+  background-image: url("../img/telegram-active.svg");
+}
+
+.social__link--youtube:active {
+  background-image: url("../img/youtube-active.svg");
+}
+
+.copyright__link:hover path {
+  fill: @color-bg-blue;
+}
+
+.copyright__link:active path {
+  fill: @logo-active;
+}
+
 @media (min-width: @tablet-width) {
   .main-footer__wrapper {
     display: flex;
@@ -80,7 +113,8 @@
     margin: 0 auto;
     padding: 36px 0;
   }
-  .social__list{
+
+  .social__list {
     margin: 0;
   }
 

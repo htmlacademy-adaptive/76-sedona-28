@@ -8,9 +8,10 @@
 
 .advantages__promo {
   padding: 54px 18px 40px 18px;
+  background-color: @color-bg-blue;
 }
 
-@media (max-width:@mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .advantages__promo--divider {
     background-image: url("../img/divider-advantages.svg");
     background-position: top -1px center;
@@ -21,10 +22,6 @@
 .advantages__image-city {
   margin: 0;
   padding: 0;
-}
-
-.advantages__promo {
-  background-color: @color-bg-blue;
 }
 
 .advantages__title {
@@ -53,10 +50,10 @@
   margin-bottom: 16px;
 }
 
-@media(max-width:@mobile-width-only){
-.advantages__title br{
-  display: none;
-}
+@media (max-width: @mobile-width-only) {
+  .advantages__title br {
+    display: none;
+  }
 }
 
 .advantages__item-bonus-description {
@@ -71,7 +68,7 @@
   padding: 23px 18px 46px 18px;
   margin: 0;
 
-  @media(min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     padding: 0;
   }
 }
@@ -197,38 +194,43 @@
 
   .advantages__item-bonus {
     width: 256px;
-    padding: 0;
     text-align: center;
     padding: 158px 33px 60px 33px;
   }
+
   .advantages__item-bonus--living {
     background-image: url("../img/living-icon.svg");
     background-repeat: no-repeat;
     background-size: 78px 72px;
     background-position: top 60px right 50%;
   }
+
   .advantages__item-bonus--food {
     background-image: url("../img/food-icon.svg");
     background-repeat: no-repeat;
     background-size: 78px 72px;
     background-position: top 60px right 50%;
   }
+
   .advantages__item-bonus--gifts {
     background-image: url("../img/gift-icon.svg");
     background-repeat: no-repeat;
     background-size: 78px 72px;
     background-position: top 60px right 50%;
   }
+
   .advantages__item-bonus-description {
     margin: 0;
   }
-  .advantages__list-nopicture{
+
+  .advantages__list-nopicture {
     flex-direction: row;
     align-items: center;
     padding: 0;
     margin: 0;
   }
-  .advantages__wrapper-picture--reverse{
+
+  .advantages__wrapper-picture--reverse {
     display: flex;
     flex-direction: row-reverse;
   }
