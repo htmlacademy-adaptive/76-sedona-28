@@ -21,10 +21,9 @@ body {
   line-height: 21px;
   margin: 0;
 }
-@media (min-width: 1200px) {
-  body {
-    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
-  }
+.container {
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  position: relative;
 }
 *,
 *::before,
@@ -61,7 +60,6 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   color: #000000;
-  height: 56px;
 }
 .main-header__logo {
   height: 96px;
@@ -205,10 +203,20 @@ body {
     font-size: 14px;
     line-height: 21px;
   }
+  .main-navigation__link:hover {
+    color: #81b3d2;
+  }
+  .main-navigation__link:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
   .main-navigation__link--center {
     margin-right: 163px;
   }
   .main-navigation__link--current {
+    color: #766357;
+  }
+  .main-navigation__link--current:hover,
+  .main-navigation__link--current :active {
     color: #766357;
   }
 }
@@ -258,6 +266,11 @@ body {
   color: #000000;
   margin: 0;
   margin-bottom: 35px;
+}
+@media (min-width: 768px) {
+  .slogan__title {
+    font-size: 21px;
+  }
 }
 .slogan__description {
   text-align: center;
@@ -318,6 +331,17 @@ body {
   .advantages__title br {
     display: none;
   }
+  .advantages__item--nopicture {
+    position: relative;
+  }
+  .advantages__item--decoration::after {
+    content: "";
+    position: absolute;
+    border: solid 1px #d6d6d6;
+    width: 284px;
+    top: -30px;
+    left: 0;
+  }
 }
 .advantages__item-bonus-description {
   margin: 0;
@@ -368,7 +392,7 @@ body {
 }
 .advantages__item--nopicture {
   background-color: #eeeeee;
-  margin-bottom: 24px;
+  margin-bottom: 49px;
 }
 .advantages__item--nopicture:last-child {
   margin-bottom: 0;
@@ -402,6 +426,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .advantages__title {
+    font-size: 21px;
+  }
+  .advantages__item-bonus-title {
+    font-size: 21px;
+  }
+  .advantages__item--nopicture .advantages__title {
+    font-size: 21px;
   }
   .advantages__wrapper-picture {
     display: flex;
@@ -543,6 +576,7 @@ body {
   .hotel-search__title {
     padding: 60px 166px 0 166px;
     margin-bottom: 40px;
+    font-size: 30px;
   }
   .hotel-search__description {
     padding: 0 166px;
@@ -609,6 +643,11 @@ body {
   padding: 0;
   padding-right: 8px;
 }
+.copyright__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 .social__list {
   display: flex;
   flex-wrap: wrap;
@@ -619,50 +658,92 @@ body {
   width: 156px;
   margin-bottom: 30px;
 }
-.social-item {
-  margin-right: 6px;
+.social__link {
+  display: block;
+  background-color: #81b3d2;
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+.social__link--vkontakte::before {
+  position: absolute;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 14px;
+  padding: 14px;
+  top: 10px;
+  left: 10px;
+  content: "";
+  cursor: pointer;
+}
+.social__link--telegram::before {
+  position: absolute;
+  background-image: url("../img/telegram-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 14px;
+  padding: 14px;
+  top: 10px;
+  left: 10px;
+  content: "";
+  cursor: pointer;
+}
+.social__link--youtube::before {
+  position: absolute;
+  background-image: url("../img/youtube-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 14px;
+  padding: 14px;
+  top: 10px;
+  left: 10px;
+  content: "";
+  cursor: pointer;
+}
+.social__link:hover::before {
+  background-color: #669ec0;
+}
+.social__link:active::before {
+  opacity: 0.3;
+  background-color: #5496bd;
 }
 .social__link--vkontakte {
-  background-image: url("../img/social-vk.svg");
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  padding: 15px 24px;
-}
-.social__link--telegram {
-  background-image: url("../img/social-tg.svg");
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  padding: 15px 24px;
+  background-color: #81b3d2;
 }
 .social__link--youtube {
-  background-image: url("../img/social-youtube.svg");
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  padding: 15px 24px;
+  background-color: #81b3d2;
 }
 .social__link--vkontakte:hover {
-  background-image: url("../img/vk-hover.svg");
+  background-color: #669ec0;
 }
 .social__link--telegram:hover {
-  background-image: url("../img/telegram-hover.svg");
+  background-color: #669ec0;
 }
 .social__link--youtube:hover {
-  background-image: url("../img/youtube-hover.svg");
+  background-color: #669ec0;
 }
 .social__link--vkontakte:active {
-  background-image: url("../img/vk-active.svg");
+  background-color: #5496bd;
 }
 .social__link--telegram:active {
-  background-image: url("../img/telegram-active.svg");
+  background-color: #5496bd;
 }
 .social__link--youtube:active {
-  background-image: url("../img/youtube-active.svg");
+  background-color: #5496bd;
 }
 .copyright__link:hover path {
   fill: #81b3d2;
 }
+.copyright__link:hover {
+  color: #81b3d2;
+}
 .copyright__link:active path {
   fill: #b3b3b3;
+  color: #b3b3b3;
+}
+.copyright__link:active {
+  color: #b3b3b3;
 }
 @media (min-width: 768px) {
   .main-footer__wrapper {
@@ -771,6 +852,14 @@ body {
     top: -30px;
     left: -20px;
   }
+  .media__item:last-child::after {
+    content: "";
+    position: absolute;
+    border: solid 1px #eeeeee;
+    width: 320px;
+    top: 400px;
+    left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .media__list {
@@ -780,6 +869,7 @@ body {
   }
   .media__photo {
     width: 324px;
+    vertical-align: bottom;
   }
   .media__photo--sunrise {
     width: 648px;
@@ -880,7 +970,7 @@ body {
 }
 .movie__button {
   background-image: url("../img/play-button.svg");
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
@@ -1019,11 +1109,19 @@ body {
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   border: none;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 16px;
+}
+.form__input:hover {
+  background-color: #e5e5e5;
+}
+.form__input:focus {
+  background-color: #ffffff;
+  outline: solid 4px #e5e5e5;
 }
 .form__label:last-child {
   margin-bottom: 0;
@@ -1069,6 +1167,24 @@ body {
   border-radius: 50%;
   background-color: #f2f2f2;
 }
+.form__control-mark:hover {
+  background-color: #e5e5e5;
+}
+.form__control-mark:active {
+  background-color: #d5d5d5;
+}
+.form__input-radio[type="radio"]:active + .form__control-mark::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+.form__control-mark-checkbox:hover {
+  background-color: #e5e5e5;
+}
+.form__control-mark-checkbox:active {
+  background-color: #d5d5d5;
+}
+.form__input-checkbox[type="checkbox"]:active + .form__control-mark-checkbox::before {
+  background-image: url("../img/active-tick.svg");
+}
 .form__item {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -1110,7 +1226,6 @@ body {
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
-  padding-left: 16px;
 }
 .form__icon-phone {
   background-image: url("../img/phone-icon.svg");
@@ -1141,6 +1256,10 @@ body {
 @media (min-width: 768px) {
   .form {
     padding: 0 60px;
+  }
+  .form__title {
+    font-size: 21px;
+    line-height: 26px;
   }
   .form__wrapper {
     display: flex;
@@ -1244,9 +1363,22 @@ body {
     justify-content: space-between;
   }
 }
+.modal-container {
+  position: fixed;
+  display: none;
+  /*заменить на flex*/
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .modal {
   background-color: #ffffff;
   padding-bottom: 20px;
+  position: fixed;
 }
 .modal__text {
   padding: 45px 42px 28px 41px;
@@ -1264,6 +1396,9 @@ body {
 @media (max-width: 767px) {
   .modal__title br {
     display: none;
+  }
+  .modal {
+    max-width: 320px;
   }
 }
 .modal__description {
@@ -1294,7 +1429,6 @@ body {
   .modal {
     margin: 0 auto;
     max-width: 400px;
-    height: 100%;
     padding-bottom: 45px;
   }
   .modal__text {
@@ -1305,7 +1439,6 @@ body {
   }
   .modal--success {
     max-width: 640px;
-    height: 100%;
   }
   .modal--success .modal__text {
     padding: 51px 91px 72px 97px;
