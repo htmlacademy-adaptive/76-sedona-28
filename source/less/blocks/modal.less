@@ -1,7 +1,22 @@
+.modal-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .modal {
   background-color: @color-white;
   padding-bottom: 20px;
+  position: fixed;
+  display: none;
 }
+
 
 .modal__text {
   padding: 45px 42px 28px 41px;
@@ -21,6 +36,10 @@
 @media (max-width: @mobile-width-only) {
   .modal__title br {
     display: none;
+  }
+
+  .modal {
+    max-width: 320px;
   }
 }
 
@@ -55,7 +74,6 @@
   .modal {
     margin: 0 auto;
     max-width: 400px;
-    height: 100%;
     padding-bottom: 45px;
   }
 
@@ -69,7 +87,6 @@
 
   .modal--success {
     max-width: 640px;
-    height: 100%;
   }
 
   .modal--success .modal__text {

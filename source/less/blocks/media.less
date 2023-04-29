@@ -67,6 +67,15 @@
     top: -30px;
     left: -20px;
   }
+
+  .media__item:last-child::after {
+    content: "";
+    position: absolute;
+    border: solid 1px @color-bg-grey;
+    width: 320px;
+    top: 400px;
+    left: -20px;
+  }
 }
 
 
@@ -79,6 +88,7 @@
 
   .media__photo {
     width: 324px;
+    vertical-align: bottom;
   }
 
   .media__photo--sunrise {

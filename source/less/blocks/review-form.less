@@ -52,11 +52,21 @@
   font-size: 18px;
   line-height: 26px;
   color: @color-title;
-  background-color: @color-bg-grey;
+  background-color: @color-checkbox;
   border: none;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 16px;
+}
+
+.form__input:hover {
+  background-color: @button-disabled;
+}
+
+.form__input:focus {
+  background-color: @color-white;
+  outline: solid 4px @button-disabled;
 }
 
 .form__label:last-child {
@@ -108,6 +118,30 @@
   background-color: @color-checkbox;
 }
 
+.form__control-mark:hover {
+  background-color: @button-disabled;
+}
+
+.form__control-mark:active {
+  background-color: #d5d5d5;
+}
+
+.form__input-radio[type="radio"]:active + .form__control-mark::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.form__control-mark-checkbox:hover {
+  background-color: @button-disabled;
+}
+
+.form__control-mark-checkbox:active {
+  background-color: #d5d5d5;
+}
+
+.form__input-checkbox[type="checkbox"]:active + .form__control-mark-checkbox::before {
+  background-image: url("../img/active-tick.svg");
+}
+
 .form__item {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -154,7 +188,6 @@
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
-  padding-left: 16px;
 }
 
 .form__icon-phone {
@@ -190,6 +223,11 @@
 @media (min-width: @tablet-width) {
   .form {
     padding: 0 60px;
+  }
+
+  .form__title {
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .form__wrapper {

@@ -159,12 +159,25 @@
     line-height: 21px;
   }
 
+  .main-navigation__link:hover {
+    color: @color-bg-blue;
+  }
+
+  .main-navigation__link:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   .main-navigation__link--center {
     margin-right: 163px;
   }
 
   .main-navigation__link--current {
     color: @color-nav-link-current;
+
+    &:hover,
+    :active {
+      color: @color-nav-link-current;
+    }
   }
 }
 
