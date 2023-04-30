@@ -1,8 +1,21 @@
 .main-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: @color-white;
   color: #000000;
 }
 
 .main-header__logo {
   height: 96px;
+  position: absolute;
+  top: 0;
+  left: 67px;
+
+  @media (min-width: @tablet-width) {
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

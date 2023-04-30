@@ -1,11 +1,64 @@
+.modal-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-container--close {
+  display: none;
+}
+
+/*.modal--error {
+display: ;
+}
+
+.modal--success {
+  display: ;
+}*/
+
 .modal {
   background-color: @color-white;
+  position: fixed;
+}
+
+.modal__text {
+  padding: 45px 42px 28px 41px;
 }
 
 .modal__title {
   font-family: @main-font;
   color: @color-title;
+  font-size: 18px;
+  line-height: 26px;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.modal--success .modal__wrapper {
+  background-color: @color-checkbox;
+  padding: 20px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .modal__title br {
+    display: none;
+  }
+
+  .modal {
+    max-width: 320px;
+  }
+
+  .modal--error {
+    padding-bottom: 20px;
+  }
 }
 
 .modal__description {
@@ -15,5 +68,76 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: center;
   color: @color-description;
+  margin: 0;
+}
+
+.modal__button {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 18px 64px;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal--success .modal__button {
+  padding: 18px 50px 14px 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .modal--error {
+    padding-bottom: 45px;
+  }
+
+  .modal--success .modal__wrapper {
+    padding: 44px 91px;
+  }
+
+  .modal__text {
+    padding: 50px 47px 25px 46px;
+  }
+
+  .modal__button {
+    padding: 18px 108px 14px 108px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .modal--success {
+    max-width: 640px;
+  }
+
+  .modal--success .modal__text {
+    padding: 51px 91px 72px 97px;
+  }
+
+  .modal--success .modal__button {
+    padding: 18px 140px 14px 140px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .modal__button {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }

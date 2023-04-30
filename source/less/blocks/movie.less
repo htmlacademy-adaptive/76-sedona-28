@@ -1,10 +1,14 @@
 .movie {
   background-color: @color-white;
   padding: 0 20px;
+  position: relative;
 }
 
 .movie__title {
   .mixin-title();
+  margin: 0;
+  text-align: center;
+  padding-bottom: 36px;
 }
 
 .movie__description {
@@ -15,6 +19,24 @@
   line-height: 21px;
   text-transform: uppercase;
   color: @color-description;
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 6px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.movie__button {
+  background-image: url("../img/play-button.svg");
+  background-color: transparent;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 54px;
+  position: absolute;
+  border: none;
+  z-index: 2;
 }
 
 @media (min-width: @tablet-width) {
@@ -24,15 +46,44 @@
 
   .movie__photo {
     width: 648px;
+    height: 500px;
+    margin-bottom: 40px;
+  }
+
+  .movie__title {
+    font-family: @main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .movie__description {
+    padding: 0 136px 66px 136px;
+    margin: 0;
+  }
+
+  .movie__button {
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 @media (min-width: @desktop-width) {
   .movie {
-    padding: 200px;
+    padding: 0;
+    padding-top: 62px;
+  }
+
+  .movie__description {
+    padding: 0 376px 64px 376px;
+    margin: 0;
   }
 
   .movie__photo {
-    width: 800px;
+    width: 1200px;
+    padding: 0 200px 84px 200px;
+    margin: 0;
   }
 }

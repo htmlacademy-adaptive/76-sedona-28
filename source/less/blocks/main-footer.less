@@ -10,34 +10,180 @@
   line-height: 26px;
   list-style: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 33px;
+  margin-bottom: 30px;
 }
 
 
 .main-footer__copyright {
+  display: flex;
   color: @color-title;
   text-align: center;
   text-transform: uppercase;
+  max-width: 129px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 33px;
+}
+
+.copyright__text {
+  margin: 0;
+  padding: 0;
+  padding-right: 8px;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-between;
+  width: 156px;
+  margin-bottom: 30px;
+}
+
+.social__link {
+  display: block;
+  background-color: @color-bg-blue;
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.social__link--vkontakte::before {
+  position: absolute;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  content: "";
+  cursor: pointer;
+}
+
+.social__link--telegram::before {
+  position: absolute;
+  background-image: url("../img/telegram-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  content: "";
+  cursor: pointer;
+}
+
+.social__link--youtube::before {
+  position: absolute;
+  background-image: url("../img/youtube-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  content: "";
+  cursor: pointer;
+}
+
+.social__link:hover::before {
+  background-color: @button-hover;
+}
+
+.social__link:active::before {
+  opacity: 0.3;
+  background-color: @button-active;
+}
+
+.social__link--vkontakte {
+  background-color: @color-bg-blue;
+}
+
+.social__link--youtube {
+  background-color: @color-bg-blue;
+}
+
+.social__link--vkontakte:hover {
+  background-color: @button-hover;
+}
+
+.social__link--telegram:hover {
+  background-color: @button-hover;
+}
+
+.social__link--youtube:hover {
+  background-color: @button-hover;
+}
+
+.social__link--vkontakte:active {
+  background-color: @button-active;
+}
+
+.social__link--telegram:active {
+  background-color: @button-active;
+}
+
+.social__link--youtube:active {
+  background-color: @button-active;
+}
+
+.copyright__link:hover path {
+  fill: @color-bg-blue;
+}
+
+.copyright__link:hover {
+  color: @color-bg-blue;
+}
+
+.copyright__link:active path {
+  fill: @logo-active;
+  color: @logo-active;
+}
+
+.copyright__link:active {
+  color: @logo-active;
 }
 
 @media (min-width: @tablet-width) {
   .main-footer__wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     width: 648px;
     margin: 0 auto;
+    padding: 36px 0;
   }
 
   .social__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 0;
   }
 
   .main-footer__copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-footer__slogan {
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }
 
