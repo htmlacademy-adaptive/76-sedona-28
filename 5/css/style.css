@@ -129,6 +129,15 @@ body {
   background-color: rgba(129, 179, 210, 0.3);
   box-shadow: 0 9px 0 0 rgba(129, 179, 210, 0.3), 0 18px 0 0 rgba(129, 179, 210, 0.3);
 }
+@media (max-width: 767px) {
+  .main-navigation--opened .main-navigation__wrapper {
+    position: absolute;
+    width: 320px;
+  }
+  .main-navigation--nojs .main-navigation__wrapper {
+    position: static;
+  }
+}
 .main-navigation--opened .main-navigation__toggle {
   background-color: #81b3d2;
   z-index: 2;
@@ -303,6 +312,7 @@ body {
 .advantages__image-city {
   margin: 0;
   padding: 0;
+  vertical-align: bottom;
 }
 .advantages__title {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -670,10 +680,10 @@ body {
   background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px 14px;
-  padding: 14px;
-  top: 10px;
-  left: 10px;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
   content: "";
   cursor: pointer;
 }
@@ -682,10 +692,10 @@ body {
   background-image: url("../img/telegram-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px 14px;
-  padding: 14px;
-  top: 10px;
-  left: 10px;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
   content: "";
   cursor: pointer;
 }
@@ -694,10 +704,10 @@ body {
   background-image: url("../img/youtube-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px 14px;
-  padding: 14px;
-  top: 10px;
-  left: 10px;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
   content: "";
   cursor: pointer;
 }
@@ -1033,6 +1043,10 @@ body {
   background-size: 320px 390px;
   padding: 86px 19px 85px 19px;
 }
+.promo__logo {
+  margin: 0 auto;
+  display: block;
+}
 @media (min-width: 768px) {
   .promo {
     background-image: url("../img/tablet-divider.svg"), url("../img/main-promo.jpg");
@@ -1084,6 +1098,7 @@ body {
 }
 .form__fieldset--contact {
   padding-bottom: 59px;
+  position: relative;
 }
 .form__title {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1101,6 +1116,7 @@ body {
   position: relative;
   display: block;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 .form__input {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1115,6 +1131,24 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
+}
+.form__label:hover .form__input-radio[type="radio"] + .form__control-mark {
+  background-color: #e5e5e5;
+}
+.form__label:hover .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox {
+  background-color: #e5e5e5;
+}
+.form__label:active .form__input-radio[type="radio"] + .form__control-mark {
+  background-color: #d5d5d5;
+}
+.form__label:active .form__input-radio[type="radio"] + .form__control-mark::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+.form__label:active .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox {
+  background-color: #d5d5d5;
+}
+.form__label:active .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox::before {
+  background-image: url("../img/active-tick.svg");
 }
 .form__input:hover {
   background-color: #e5e5e5;
@@ -1167,24 +1201,6 @@ body {
   border-radius: 50%;
   background-color: #f2f2f2;
 }
-.form__control-mark:hover {
-  background-color: #e5e5e5;
-}
-.form__control-mark:active {
-  background-color: #d5d5d5;
-}
-.form__input-radio[type="radio"]:active + .form__control-mark::before {
-  background-color: rgba(51, 51, 51, 0.3);
-}
-.form__control-mark-checkbox:hover {
-  background-color: #e5e5e5;
-}
-.form__control-mark-checkbox:active {
-  background-color: #d5d5d5;
-}
-.form__input-checkbox[type="checkbox"]:active + .form__control-mark-checkbox::before {
-  background-image: url("../img/active-tick.svg");
-}
 .form__item {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -1227,7 +1243,7 @@ body {
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);
 }
-.form__icon-phone {
+.form__label--phone::before {
   background-image: url("../img/phone-icon.svg");
   width: 58px;
   height: 58px;
@@ -1235,8 +1251,9 @@ body {
   position: absolute;
   top: 21px;
   right: 0;
+  content: "";
 }
-.form__icon-email {
+.form__label--mail::before {
   background-image: url("../img/mail-icon.svg");
   width: 58px;
   height: 58px;
@@ -1244,6 +1261,7 @@ body {
   position: absolute;
   top: 21px;
   right: 0;
+  content: "";
 }
 .form__list {
   list-style: none;
@@ -1365,8 +1383,7 @@ body {
 }
 .modal-container {
   position: fixed;
-  display: none;
-  /*заменить на flex*/
+  display: flex;
   align-items: center;
   justify-content: center;
   top: 0;
@@ -1375,9 +1392,18 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.modal-container--close {
+  display: none;
+}
+/*.modal--error {
+display: ;
+}
+
+.modal--success {
+  display: ;
+}*/
 .modal {
   background-color: #ffffff;
-  padding-bottom: 20px;
   position: fixed;
 }
 .modal__text {
@@ -1393,12 +1419,19 @@ body {
   margin: 0;
   margin-bottom: 55px;
 }
+.modal--success .modal__wrapper {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 @media (max-width: 767px) {
   .modal__title br {
     display: none;
   }
   .modal {
     max-width: 320px;
+  }
+  .modal--error {
+    padding-bottom: 20px;
   }
 }
 .modal__description {
@@ -1429,13 +1462,20 @@ body {
   .modal {
     margin: 0 auto;
     max-width: 400px;
+  }
+  .modal--error {
     padding-bottom: 45px;
+  }
+  .modal--success .modal__wrapper {
+    padding: 44px 91px;
   }
   .modal__text {
     padding: 50px 47px 25px 46px;
   }
   .modal__button {
     padding: 18px 108px 14px 108px;
+    font-size: 21px;
+    line-height: 26px;
   }
   .modal--success {
     max-width: 640px;
@@ -1445,6 +1485,20 @@ body {
   }
   .modal--success .modal__button {
     padding: 18px 140px 14px 140px;
+  }
+  .modal__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+  .modal__button {
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 .container {

@@ -81,16 +81,14 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--contact">
               <h2 class="form__title">Контактная информация:</h2>
-              <label class="form__label">
+              <label class="form__label form__label--phone">
                 <span class="form__text">Контактный телефон*:</span>
                 <input class="form__input" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Введите телефон"
                   required>
-                <span class="form__icon-phone"></span>
               </label>
-              <label class="form__label">
+              <label class="form__label form__label--mail">
                 <span class="form__text">Электронная почта*:</span>
                 <input class="form__input" type="email" name="email" placeholder="Введите e-mail" required>
-                <span class="form__icon-email"></span>
               </label>
             </fieldset>
           </div>
@@ -210,7 +208,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container">
+    <div class="modal-container modal-container--close">
       <div class="modal modal--error">
         <div class="modal__text">
           <h2 class="modal__title"> Что-то пошло <br> не так! </h2>
@@ -219,14 +217,16 @@
         <button class="modal__button button" type="button">ОК</button>
       </div>
     </div>
-    <div class="modal-container">
+    <div class="modal-container modal-container--close">
       <div class="modal modal--success">
         <div class="modal__text">
           <h2 class="modal__title"> Ваш отзыв отправлен! </h2>
           <p class="modal__description"> Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы
             опубликуем его на сайте. </p>
         </div>
-        <button class="modal__button button" type="button">Закрыть окно</button>
+        <div class="modal__wrapper">
+          <button class="modal__button button" type="button">Закрыть окно</button>
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>
