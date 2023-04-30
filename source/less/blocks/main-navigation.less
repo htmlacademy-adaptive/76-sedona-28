@@ -63,6 +63,17 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-navigation--opened .main-navigation__wrapper {
+    position: absolute;
+    width: 320px;
+  }
+
+  .main-navigation--nojs .main-navigation__wrapper {
+    position: static;
+  }
+}
+
 .main-navigation--opened .main-navigation__toggle {
   background-color: @color-bg-blue;
   z-index: 2;

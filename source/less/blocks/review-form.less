@@ -29,6 +29,7 @@
 
 .form__fieldset--contact {
   padding-bottom: 59px;
+  position: relative;
 }
 
 .form__title {
@@ -43,6 +44,7 @@
   position: relative;
   display: block;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .form__input {
@@ -58,6 +60,34 @@
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
+}
+
+.form__label:hover {
+  .form__input-radio[type="radio"] + .form__control-mark {
+    background-color: @button-disabled;
+  }
+
+  .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox {
+    background-color: @button-disabled;
+  }
+}
+
+.form__label:active {
+  .form__input-radio[type="radio"] + .form__control-mark {
+    background-color: #d5d5d5;
+  }
+
+  .form__input-radio[type="radio"] + .form__control-mark::before {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
+
+  .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox {
+    background-color: #d5d5d5;
+  }
+
+  .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox::before {
+    background-image: url("../img/active-tick.svg");
+  }
 }
 
 .form__input:hover {
@@ -118,30 +148,6 @@
   background-color: @color-checkbox;
 }
 
-.form__control-mark:hover {
-  background-color: @button-disabled;
-}
-
-.form__control-mark:active {
-  background-color: #d5d5d5;
-}
-
-.form__input-radio[type="radio"]:active + .form__control-mark::before {
-  background-color: rgba(51, 51, 51, 0.3);
-}
-
-.form__control-mark-checkbox:hover {
-  background-color: @button-disabled;
-}
-
-.form__control-mark-checkbox:active {
-  background-color: #d5d5d5;
-}
-
-.form__input-checkbox[type="checkbox"]:active + .form__control-mark-checkbox::before {
-  background-image: url("../img/active-tick.svg");
-}
-
 .form__item {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -190,7 +196,7 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.form__icon-phone {
+.form__label--phone::before {
   background-image: url("../img/phone-icon.svg");
   width: 58px;
   height: 58px;
@@ -198,9 +204,10 @@
   position: absolute;
   top: 21px;
   right: 0;
+  content: "";
 }
 
-.form__icon-email {
+.form__label--mail::before {
   background-image: url("../img/mail-icon.svg");
   width: 58px;
   height: 58px;
@@ -208,6 +215,7 @@
   position: absolute;
   top: 21px;
   right: 0;
+  content: "";
 }
 
 .form__list {
