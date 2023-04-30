@@ -1132,10 +1132,10 @@ body {
   padding-bottom: 16px;
   padding-left: 16px;
 }
-.form__label:hover .form__input-radio[type="radio"] + .form__control-mark {
+.form__label:hover .form__control-mark {
   background-color: #e5e5e5;
 }
-.form__label:hover .form__input-checkbox[type="checkbox"] + .form__control-mark-checkbox {
+.form__label:hover .form__control-mark-checkbox {
   background-color: #e5e5e5;
 }
 .form__label:active .form__input-radio[type="radio"] + .form__control-mark {
