@@ -64,8 +64,12 @@
           <ul class="media__list">
             <li class="media__item">
               <a class="media__photo-link" href="#">
-                <img class="media__photo media__photo--sunrise" src="img/sunrise-mobile.jpg" width="280" height="280"
-                  alt="Фото дороги на закате">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/sunrise-desktop.jpg 1x, img/sunrise-desktop2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/sunrise-tablet.jpg 1x, img/sunrise-tablet2x.jpg 2x">
+                  <img class="media__photo media__photo--sunrise" src="img/sunrise-mobile.jpg"
+                    srcset="img/sunrise-mobile2x.jpg 2x" width="280" height="280" alt="Фото дороги на закате">
+                </picture>
               </a>
               <div class="media__item-wrapper">
                 <div class="media__item-description">
@@ -81,8 +85,12 @@
             </li>
             <li class="media__item">
               <a class="media__photo-link" href="#">
-                <img class="media__photo media__photo--nature" src="img/nature-mobile.jpg" width="280" height="280"
-                  alt="Фото растительности">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/nature-desktop.jpg 1x, img/nature-desktop2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/nature-tablet.jpg 1x, img/nature-tablet2x.jpg 2x">
+                  <img class="media__photo media__photo--nature" src="img/nature-mobile.jpg"
+                    srcset="img/nature-mobile2x.jpg 2x" width="280" height="280" alt="Фото растительности">
+                </picture>
               </a>
               <div class="media__item-wrapper">
                 <div class="media__item-description">
@@ -97,8 +105,14 @@
             </li>
             <li class="media__item">
               <a class="media__photo-link" href="#">
-                <img class="media__photo media__photo--forest" src="img/road-forest-mobile.jpg" width="280" height="280"
-                  alt="Фото дороги в лесу">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/road-forest-desktop.jpg 1x, img/road-forest-desktop2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/road-forest-tablet.jpg 1x, img/road-forest-tablet2x.jpg 2x">
+                  <img class="media__photo media__photo--forest" src="img/road-forest-mobile.jpg"
+                    srcset="img/road-forest-mobile2x.jpg 2x" width="280" height="280" alt="Фото дороги в лесу">
+                </picture>
               </a>
               <div class="media__item-wrapper">
                 <div class="media__item-description">
@@ -113,8 +127,12 @@
             </li>
             <li class="media__item">
               <a class="media__photo-link" href="#">
-                <img class="media__photo media__photo--rock" src="img/rock-bridge-mobile.jpg" width="280" height="280"
-                  alt="Фото моста дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/bridge-desktop.jpg 1x, img/bridge-desktop2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/bridge-tablet.jpg 1x, img/bridge-tablet2x.jpg 2x">
+                  <img class="media__photo media__photo--rock" src="img/rock-bridge-mobile.jpg"
+                    srcset="img/rock-bridge-mobile2x.jpg 2x" width="280" height="280" alt="Фото моста дьявола">
+                </picture>
               </a>
               <div class="media__item-wrapper">
                 <div class="media__item-description">
@@ -135,7 +153,11 @@
         <p class="movie__title">Вы ещё сомневаетесь?</p>
         <p class="movie__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
           раз!</p>
-        <img class="movie__photo" src="img/movie-mobile.jpg" width="280" height="176" alt="Обложка ролика про Седону">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/movie-desktop.jpg 1x, img/movie-desktop2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/movie-tablet.jpg 1x, img/movie-tablet2x.jpg 2x">
+          <img class="movie__photo" src="img/movie-mobile.jpg" srcset="img/movie-mobile2x.jpg 2x" width="280" height="176" alt="Обложка ролика про Седону">
+        </picture>
         <button class="movie__button" type="button">
           <span class="visually-hidden">Воспроизвести</span>
         </button>
