@@ -7,15 +7,22 @@
 }
 
 .advantages__promo {
-  padding: 54px 18px 40px 18px;
+  padding: 53px 18px 40px 18px;
   background-color: @color-bg-blue;
+}
+
+.advantages__promo--bridge {
+  padding: 40px 18px 40px 18px;
 }
 
 @media (max-width: @mobile-width-only) {
   .advantages__promo--divider {
     background-image: url("../img/divider-advantages.svg");
-    background-position: top -1px center;
+    background-position: top -16px center;
     background-repeat: no-repeat;
+  }
+  .advantages__item-bonus-description br{
+    display: none;
   }
 }
 
@@ -33,7 +40,7 @@
   line-height: 26px;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .advantages__description {
@@ -68,18 +75,25 @@
     top: -30px;
     left: 0;
   }
+
+}
+
+@media (max-width: @tablet-width-only) {
+  .advantages__promo br {
+    display: none;
+  }
 }
 
 .advantages__item-bonus-description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
 }
 
 .advantages__list-bonus {
   background-color: @color-white;
   color: @color-description;
   list-style: none;
-  padding: 23px 18px 46px 18px;
+  padding: 31px 20px 0 0;
   margin: 0;
 
   @media (min-width: @tablet-width) {
@@ -90,31 +104,62 @@
 .advantages__item-bonus {
   text-align: start;
   padding-left: 65px;
+  position: relative;
 }
 
-.advantages__item-bonus--living {
-  background-image: url("../img/living-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
+.advantages__item-bonus:last-child {
+  padding-bottom: 12px;
 }
 
-.advantages__item-bonus--food {
-  background-image: url("../img/food-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-}
+@media (max-width:@mobile-width-only) {
+  .advantages__item-bonus--living::before {
+    background-image: url("../img/living-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 17px;
+  }
 
-.advantages__item-bonus--gifts {
-  background-image: url("../img/gift-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
+  .advantages__item-bonus--food::before {
+    background-image: url("../img/food-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 17px;
+  }
+
+  .advantages__item-bonus--gifts::before {
+    background-image: url("../img/gift-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 40px;
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 12px;
+  }
+  .advantages__description--tablet, .advantages__description--desktop {
+    display: none;
+  }
+  .advantages__title br {
+    display: none;
+  }
 }
 
 .advantages__list-nopicture {
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 24px 18px 28px 18px;
+  padding: 15px 18px 28px 18px;
   text-align: center;
   background-color: @color-bg-grey;
   margin: 0;
@@ -126,7 +171,7 @@
 
 .advantages__item--nopicture {
   background-color: @color-bg-grey;
-  margin-bottom: 49px;
+  margin-bottom: 37px;
 }
 
 .advantages__item--nopicture:last-child {
@@ -141,12 +186,12 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 
 .advantages__counter {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 
 .advantages__item--nopicture .advantages__description,
@@ -158,6 +203,11 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.advantages__item--nopicture:last-child .advantages__description {
+  margin-bottom: 0;
 }
 
 
@@ -170,14 +220,17 @@
 
   .advantages__title {
     font-size: 21px;
+    margin-bottom: 14px;
   }
 
   .advantages__item-bonus-title {
     font-size: 21px;
+    margin-bottom: 22px;
   }
 
   .advantages__item--nopicture .advantages__title {
     font-size: 21px;
+    padding-top: 8px;
   }
 
   .advantages__wrapper-picture {
@@ -195,12 +248,15 @@
   .advantages__item--nopicture {
     width: 256px;
     margin: 0;
-    padding: 41px 33px;
+    padding: 35px 33px 29px 33px;
   }
 
   .advantages__promo {
     width: 256px;
-    padding: 50px 33px 28px 33px;
+    padding: 55px 33px 28px 33px;
+  }
+  .advantages__counter {
+    margin-bottom: 23px;
   }
 
 
@@ -210,6 +266,7 @@
 
   .advantages__image-bridge {
     width: 512px;
+    vertical-align: bottom;
   }
 
   .advantages__list-bonus {
@@ -221,7 +278,7 @@
   .advantages__item-bonus {
     width: 256px;
     text-align: center;
-    padding: 158px 33px 60px 33px;
+    padding: 156px 33px 62px 33px;
   }
 
   .advantages__item-bonus--living {
@@ -241,7 +298,7 @@
   .advantages__item-bonus--gifts {
     background-image: url("../img/gift-icon.svg");
     background-repeat: no-repeat;
-    background-size: 78px 72px;
+    background-size: 79px 80px;
     background-position: top 60px right 50%;
   }
 
@@ -249,9 +306,12 @@
     margin: 0;
   }
 
+  .advantages__description--mobile, .advantages__description--desktop {
+    display: none;
+  }
+
   .advantages__list-nopicture {
     flex-direction: row;
-    align-items: center;
     padding: 0;
     margin: 0;
   }
@@ -283,14 +343,13 @@
 
   .advantages__item--nopicture {
     width: 400px;
-    padding: 52px 50px;
+    padding: 45px 50px 38px 50px;
   }
 
   .advantages__promo {
     width: 400px;
     padding: 52px 50px 51px 50px;
   }
-
 
   .advantages__image-city {
     width: 800px;
@@ -308,6 +367,32 @@
 
   .advantages__item-bonus {
     width: 400px;
-    padding: 158px 50px 69px 59px;
+    padding: 172px 56px 70px 62px;
+  }
+  .advantages__item-bonus--living {
+    background-image: url("../img/living-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 80px 76px;
+    background-position: top 68px right 50%;
+  }
+
+  .advantages__item-bonus--food {
+    background-image: url("../img/food-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 80px 76px;
+    background-position: top 68px right 50%;
+  }
+
+  .advantages__item-bonus--gifts {
+    background-image: url("../img/gift-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 92px 100px;
+    background-position: top 58px right 50%;
+  }
+  .advantages__description--tablet, advantages__description--mobile {
+    display: none;
+  }
+  .advantages__description--show {
+    display: block;
   }
 }

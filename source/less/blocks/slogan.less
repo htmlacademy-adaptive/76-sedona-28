@@ -1,13 +1,19 @@
 .slogan {
   background-color: @color-white;
-  padding: 32px 18px;
+  padding: 34px 18px;
 
   @media (min-width: @tablet-width) {
-    padding: 48px 124px 56px 124px;
+    padding: 51px 124px 56px 124px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 59px 357px 44px 359px;
+    padding: 60px 360px 44px 356px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slogan__title br {
+    display: none;
   }
 }
 
@@ -25,6 +31,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+    margin-bottom: 28px;
   }
 }
 
