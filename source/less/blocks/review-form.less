@@ -2,6 +2,7 @@
   background-color: @color-white;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 18px;
 }
 
 .form__fieldset {
@@ -10,6 +11,10 @@
   padding: 0;
   padding-bottom: 49px;
   position: relative;
+}
+
+textarea.form__input {
+  min-height: 156px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -24,19 +29,22 @@
 }
 
 .form__fieldset--info {
-  padding-bottom: 64px;
+  padding-bottom: 62px;
 }
 
 .form__fieldset--contact {
   padding-bottom: 59px;
   position: relative;
 }
+.form__fieldset--decoration {
+  padding-bottom: 46px;
+}
 
 .form__title {
   .mixin-title();
   text-align: center;
   margin: 0;
-  padding-bottom: 26px;
+  padding-bottom: 23px;
 }
 
 
@@ -128,7 +136,7 @@
 
 .form__control-mark-checkbox {
   position: absolute;
-  top: -4px;
+  top: -11px;
   left: 0;
   width: 46px;
   height: 46px;
@@ -174,6 +182,7 @@
   text-align: end;
   display: block;
   color: rgba(51, 51, 51, 0.6);
+  padding-bottom: 26px;
 }
 
 .form__text-check {
@@ -230,7 +239,8 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 60px;
+    padding: 0 60px 64px 60px;
+    position: relative;
   }
 
   .form__title {
@@ -269,6 +279,12 @@
   .form__fieldset--decoration {
     position: relative;
   }
+  .form__title--decoration {
+    padding-bottom: 28px;
+  }
+  .form__fieldset--checked {
+    padding-bottom: 24px;
+  }
 
   .form__fieldset--decoration::before {
     content: "";
@@ -295,6 +311,10 @@
     max-width: 576px;
     justify-content: space-between;
   }
+  .form__list--radio {
+    padding-left: 36px;
+    padding-top: 10px;
+  }
 
   .form__item {
     min-width: 224px;
@@ -307,6 +327,16 @@
     max-width: 480px;
     justify-content: space-between;
     margin: 0 auto;
+    padding-top: 9px;
+  }
+  .form__button {
+    padding: 16px 71px;
+  }
+  .form__tooltip {
+    position: absolute;
+    font-size: 14px;
+    bottom: 52px;
+    right: 60px;
   }
 }
 

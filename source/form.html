@@ -55,10 +55,10 @@
         <h1 class="visually-hidden">Седона</h1>
         <img class="promo__logo" src="img/sedona-logo-catalog.svg" width="230" height="40" alt="SEDONA">
       </section>
-      <div class="slogan">
+      <div class="slogan slogan--inner slogan--inner-form">
         <header class="slogan__header">
-          <h2 class="slogan__title">Оставьте свой отзыв</h2>
-          <p class="slogan__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+          <h2 class="slogan__title slogan__title--inner slogan__title--inner-form">Оставьте свой отзыв</h2>
+          <p class="slogan__description slogan__description--inner">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
             вами
             достопримечательностях</p>
         </header>
@@ -98,7 +98,7 @@
 
           <fieldset class="form__fieldset form__fieldset--decoration">
             <h2 class="form__title">Ваше общее впечатление:</h2>
-            <ul class="form__list">
+            <ul class="form__list form__list--radio">
               <li class="form__item">
                 <label class="form__label">
                   <input class="form__input-radio" type="radio" name="feedback" value="positive" checked>
@@ -122,7 +122,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--decoration">
+          <fieldset class="form__fieldset form__fieldset--decoration form__fieldset--checked">
             <h2 class="form__title">Посещенные <br> достопримечательности:</h2>
             <ul class="form__list form__list--checked">
               <li class="form__item">
@@ -156,14 +156,14 @@
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--decoration">
-            <h2 class="form__title">Опишите свои эмоции</h2>
+            <h2 class="form__title form__title--decoration">Опишите свои эмоции</h2>
             <label class="form__label">
-              <textarea class="form__input" name="feelings" rows="6"
+              <textarea class="form__input" name="feelings"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
           </fieldset>
           <button class="button form__button" type="submit">Отправить отзыв</button>
-          <span class="form__tooltip">*-Обязательное поле</span>
+          <span class="form__tooltip">* --Обязательные поля</span>
         </form>
       </section>
     </main>
