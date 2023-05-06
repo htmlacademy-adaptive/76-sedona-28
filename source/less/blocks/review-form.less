@@ -2,7 +2,7 @@
   background-color: @color-white;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 18px;
+  padding-top: 12px;
 }
 
 .form__fieldset {
@@ -23,7 +23,7 @@ textarea.form__input {
     border: solid 1px @border-color;
     width: 320px;
     position: absolute;
-    top: -18px;
+    top: -24px;
     left: -20px;
   }
 }
@@ -36,6 +36,7 @@ textarea.form__input {
   padding-bottom: 59px;
   position: relative;
 }
+
 .form__fieldset--decoration {
   padding-bottom: 46px;
 }
@@ -44,7 +45,7 @@ textarea.form__input {
   .mixin-title();
   text-align: center;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
 }
 
 
@@ -182,7 +183,7 @@ textarea.form__input {
   text-align: end;
   display: block;
   color: rgba(51, 51, 51, 0.6);
-  padding-bottom: 26px;
+  padding-bottom: 24px;
 }
 
 .form__text-check {
@@ -234,7 +235,7 @@ textarea.form__input {
 }
 
 .form__button {
-  padding: 16px 49px;
+  padding: 15px 49px;
 }
 
 @media (min-width: @tablet-width) {
@@ -246,6 +247,7 @@ textarea.form__input {
   .form__title {
     font-size: 21px;
     line-height: 26px;
+    padding-bottom: 23px;
   }
 
   .form__wrapper {
@@ -279,9 +281,11 @@ textarea.form__input {
   .form__fieldset--decoration {
     position: relative;
   }
+
   .form__title--decoration {
     padding-bottom: 28px;
   }
+
   .form__fieldset--checked {
     padding-bottom: 24px;
   }
@@ -291,7 +295,7 @@ textarea.form__input {
     border: solid 1px @border-color;
     width: 123px;
     position: absolute;
-    top: 10px;
+    top: 14px;
     left: 0;
   }
 
@@ -300,7 +304,7 @@ textarea.form__input {
     border: solid 1px @border-color;
     width: 123px;
     position: absolute;
-    top: 10px;
+    top: 14px;
     right: 0;
   }
 
@@ -311,6 +315,7 @@ textarea.form__input {
     max-width: 576px;
     justify-content: space-between;
   }
+
   .form__list--radio {
     padding-left: 36px;
     padding-top: 10px;
@@ -329,14 +334,20 @@ textarea.form__input {
     margin: 0 auto;
     padding-top: 9px;
   }
+
   .form__button {
     padding: 16px 71px;
   }
+
+  .form__button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   .form__tooltip {
-    position: absolute;
     font-size: 14px;
-    bottom: 52px;
-    right: 60px;
+    padding-bottom: 14px;
   }
 }
 
@@ -351,6 +362,14 @@ textarea.form__input {
     max-width: 960px;
   }
 
+  .form__title {
+    padding-bottom: 26px;
+  }
+
+  .form__item {
+    min-width: 0;
+  }
+
   .form__fieldset {
     display: flex;
     flex-direction: column;
@@ -358,18 +377,51 @@ textarea.form__input {
 
   .form__fieldset--info {
     width: 430px;
+    padding-bottom: 72px;
   }
 
   .form__fieldset--contact {
     width: 430px;
   }
 
+  .form__fieldset--decoration {
+    padding-bottom: 56px;
+  }
+
+  .form__fieldset--checked {
+    padding-bottom: 70px;
+  }
+
+  .form__fieldset--textarea {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-bottom: 46px;
+  }
+
+  .form__button-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-bottom: 64px;
+    position: relative;
+    align-items: flex-end;
+  }
+
+  .form__button {
+    padding: 16px 101px;
+  }
+
   .form__fieldset--decoration::before {
     width: 280px;
+    left: 5px;
+    top: 11px;
   }
 
   .form__fieldset--decoration::after {
     width: 280px;
+    right: -5px;
+    top: 11px;
   }
 
   .form__list {
@@ -384,7 +436,17 @@ textarea.form__input {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    max-width: 960px;
+    width: 960px;
     justify-content: space-between;
+    padding: 36px 44px 0 44px;
+  }
+
+  .form__list--radio {
+    padding: 20px 50px 0 53px;
+  }
+
+  .form__tooltip {
+    display: block;
+    padding-bottom: 13px;
   }
 }

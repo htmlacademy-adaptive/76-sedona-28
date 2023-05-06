@@ -21,7 +21,8 @@
     background-position: top -16px center;
     background-repeat: no-repeat;
   }
-  .advantages__item-bonus-description br{
+
+  .advantages__item-bonus-description br {
     display: none;
   }
 }
@@ -75,13 +76,6 @@
     top: -30px;
     left: 0;
   }
-
-}
-
-@media (max-width: @tablet-width-only) {
-  .advantages__promo br {
-    display: none;
-  }
 }
 
 .advantages__item-bonus-description {
@@ -111,7 +105,7 @@
   padding-bottom: 12px;
 }
 
-@media (max-width:@mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .advantages__item-bonus--living::before {
     background-image: url("../img/living-icon.svg");
     background-repeat: no-repeat;
@@ -147,9 +141,12 @@
     top: -9px;
     left: 12px;
   }
-  .advantages__description--tablet, .advantages__description--desktop {
+
+  .advantages__description--tablet,
+  .advantages__description--desktop {
     display: none;
   }
+
   .advantages__title br {
     display: none;
   }
@@ -255,6 +252,7 @@
     width: 256px;
     padding: 55px 33px 28px 33px;
   }
+
   .advantages__counter {
     margin-bottom: 23px;
   }
@@ -306,7 +304,8 @@
     margin: 0;
   }
 
-  .advantages__description--mobile, .advantages__description--desktop {
+  .advantages__description--mobile,
+  .advantages__description--desktop {
     display: none;
   }
 
@@ -320,6 +319,10 @@
   .advantages__wrapper-picture--reverse {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .advantages__title--tablet {
+    display: inline-block;
   }
 }
 
@@ -370,6 +373,7 @@
     width: 400px;
     padding: 172px 56px 70px 62px;
   }
+
   .advantages__item-bonus--living {
     background-image: url("../img/living-icon.svg");
     background-repeat: no-repeat;
@@ -390,9 +394,12 @@
     background-size: 92px 100px;
     background-position: top 58px right 50%;
   }
-  .advantages__description--tablet, advantages__description--mobile {
+
+  .advantages__description--tablet,
+  .advantages__description--mobile {
     display: none;
   }
+
   .advantages__description--show {
     display: block;
   }
