@@ -16,6 +16,9 @@
   margin-bottom: 30px;
 }
 
+.main-footer__slogan--inner {
+  padding-top: 27px;
+}
 
 .main-footer__copyright {
   display: flex;
@@ -32,13 +35,14 @@
 .copyright__text {
   margin: 0;
   padding: 0;
-  padding-right: 8px;
+  padding-right: 12px;
 }
 
 .copyright__link {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: @color-title;
 }
 
 .social__list {
@@ -140,7 +144,7 @@
   background-color: @button-active;
 }
 
-.copyright__link:hover path {
+.copyright__link:hover .copyright__icon-logo {
   fill: @color-bg-blue;
 }
 
@@ -148,7 +152,7 @@
   color: @color-bg-blue;
 }
 
-.copyright__link:active path {
+.copyright__link:active .copyright__icon-logo {
   fill: @logo-active;
   color: @logo-active;
 }
@@ -165,7 +169,11 @@
     justify-content: space-between;
     width: 648px;
     margin: 0 auto;
-    padding: 36px 0;
+    padding: 32px 0;
+  }
+
+  .main-footer__wrapper--inner {
+    padding: 30px 0;
   }
 
   .social__list {

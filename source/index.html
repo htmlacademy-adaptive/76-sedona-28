@@ -29,12 +29,12 @@
                 Главная
               </a>
             </li>
-            <li class="main-navigation__item">
+            <li class="main-navigation__item main-navigation__item--center">
               <a class="main-navigation__link main-navigation__link--center" href="catalog.html">
                 Фото и видео
               </a>
             </li>
-            <li class="main-navigation__item">
+            <li class="main-navigation__item main-navigation__item--position">
               <a class="main-navigation__link" href="form.html">
                 Форма отзыва
               </a>
@@ -59,7 +59,7 @@
           <div class="slogan">
             <header class="slogan__header">
               <h2 class="visually-hidden">Преимущества Седоны</h2>
-              <p class="slogan__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+              <p class="slogan__title">Седона — небольшой <br> городок в Аризоне, заслуживающий большего!</p>
               <p class="slogan__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
             </header>
           </div>
@@ -67,13 +67,15 @@
             <li class="advantages__item advantages__item--picture">
               <div class="advantages__wrapper-picture">
                 <div class="advantages__promo advantages__promo--divider">
-                  <h3 class="advantages__title">Настоящий городок</h3>
+                  <h3 class="advantages__title">Настоящий <br> городок</h3>
                   <span class="advantages__counter">- №1 -</span>
-                  <p class="advantages__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+                  <p class="advantages__description">Седона не аттракцион для туристов, <br> там течёт своя жизнь</p>
                 </div>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/city-desktop.jpg 1x, img/city-desktop2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/city-tablet.jpg 1x, img/city-tablet2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/city-desktop.jpg 1x, img/city-desktop2x.jpg 2x"
+                    height="256">
+                  <source media="(min-width: 768px)" srcset="img/city-tablet.jpg 1x, img/city-tablet2x.jpg 2x"
+                    height="256">
                   <img class="advantages__image-city" src="img/city-mobile.jpg" srcset="img/city-mobile2x.jpg 2x"
                     width="320" height="260" alt="Фото города Седона">
                 </picture>
@@ -86,27 +88,29 @@
                 </li>
                 <li class="advantages__item-bonus advantages__item-bonus--food">
                   <h3 class="advantages__item-bonus-title">Еда</h3>
-                  <p class="advantages__item-bonus-description">Всегда заказывайте фирменный бургер, вы не
+                  <p class="advantages__item-bonus-description">Всегда заказывайте фирменный бургер, <br> вы не
                     разочаруетесь!</p>
                 </li>
                 <li class="advantages__item-bonus advantages__item-bonus--gifts">
                   <h3 class="advantages__item-bonus-title">Сувениры</h3>
-                  <p class="advantages__item-bonus-description">Не только китайского, но и местного производства!</p>
+                  <p class="advantages__item-bonus-description">Не только китайского, <br> но и местного производства!
+                  </p>
                 </li>
               </ul>
             </li>
             <li class="advantages__item advantages__item--picture">
               <div class="advantages__wrapper-picture advantages__wrapper-picture--reverse">
-                <div class="advantages__promo">
-                  <h3 class="advantages__title">Там есть мост дьявола</h3>
+                <div class="advantages__promo advantages__promo--bridge">
+                  <h3 class="advantages__title">Там есть <br> мост дьявола</h3>
                   <span class="advantages__counter">- №2 -</span>
-                  <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                  <p class="advantages__description">Да, по нему можно пройти!<br class="advantages__description--show">
+                    Если вы <br class="advantages__description--mobile"> осмелитесь, конечно</p>
                 </div>
                 <picture>
                   <source media="(min-width: 1200px)"
-                    srcset="img/rock-bridge-desktop.jpg 1x, img/rock-bridge-desktop2x.jpg 2x">
+                    srcset="img/rock-bridge-desktop.jpg 1x, img/rock-bridge-desktop2x.jpg 2x" height="256">
                   <source media="(min-width: 768px)"
-                    srcset="img/rock-bridge-tablet.jpg 1x, img/rock-bridge-tablet2x.jpg 2x">
+                    srcset="img/rock-bridge-tablet.jpg 1x, img/rock-bridge-tablet2x.jpg 2x" height="256">
                   <img class="advantages__image-bridge" src="img/rock-bridge-mobile.jpg"
                     srcset="img/rock-bridge-mobile2x.jpg 2x" width="320" height="260" alt="Фото моста дьявола">
                 </picture>
@@ -117,19 +121,24 @@
             <li class="advantages__item advantages__item--nopicture">
               <h3 class="advantages__title">Небольшая <br> площадь</h3>
               <span class="advantages__counter advantages__counter--nopicture">- №3 -</span>
-              <p class="advantages__description">Все интересные места находятся очень близко</p>
+              <p class="advantages__description">Все интересные места <br class="advantages__description--tablet">
+                находятся <br class="advantages__description--mobile"> очень <br
+                  class="advantages__description--desktop"> близко</p>
 
             </li>
             <li class="advantages__item advantages__item--nopicture advantages__item--decoration">
               <h3 class="advantages__title">Красивая <br> дорога</h3>
               <span class="advantages__counter advantages__counter--nopicture">- №4 -</span>
-              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="advantages__description">Ехать в Седону из Лас<br
+                  class="advantages__description--tablet">-Вегаса<br class="advantages__description--mobile"> совсем <br
+                  class="advantages__description--tablet advantages__description--show">не скучно!</p>
 
             </li>
             <li class="advantages__item advantages__item--nopicture advantages__item--decoration">
               <h3 class=" advantages__title">Мало <br> туристов</h3>
               <span class="advantages__counter advantages__counter--nopicture">- №5 -</span>
-              <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="advantages__description">Большинство едет в Гранд <br class="advantages__description--tablet">
+                Каньон <br class="advantages__description--mobile"> и толпится там</p>
             </li>
           </ul>
         </div>
@@ -137,12 +146,17 @@
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <h3 class="hotel-search__title">Заинтересовались?</h3>
-        <p class="hotel-search__description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие
-          предложения
-          гостиниц в Седоне</p>
+        <p class="hotel-search__description">Укажите предполагаемые даты <br class="hotel-search__description--mobile">
+          поездки, <br class="hotel-search__description--tablet"> и мы покажем вам лучшие
+          предложения гостиниц в Седоне</p>
         <a class="button hotel-search__button" href="#">Найти гостиницу</a>
-        <img class="hotel-search__map" src="img/map-mobile.png" alt="Карта проезда к гостинице" width="320"
-          height="350">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/map-desktop.png 1x, img/map-desktop2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet2x.png 2x">
+          <img class="hotel-search__map" src="img/map-mobile.png" srcset="img/map-mobile2x.png 2x"
+            alt="Карта проезда к гостинице" width="320" height="350">
+        </picture>
+        <span class="hotel-search__map--marker"></span>
       </section>
     </main>
     <footer class="main-footer">
@@ -172,17 +186,8 @@
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">Разработано</p>
-            <svg width="29" height="36" viewBox="0 0 29 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_60288_1035)">
-                <path
-                  d="M14.65 0.949951H14.55L1.05005 2.34995V27.05L14.55 35.0499L27.95 27.05V2.34995L14.65 0.949951ZM26.05 13.05L14.55 6.24995V6.14995H14.45L14.35 6.04995V6.14995L2.95005 13.05V4.04995L14.45 2.84995L26.05 4.04995V13.05ZM14.45 7.74995L25.95 14.45L21.45 17.05L14.35 12.85V14.25L20.25 17.75L19.35 18.25L14.35 15.25V16.65L18.15 18.95L17.35 19.45L14.35 17.65V19.05L16.25 20.15L14.45 21.25L3.05005 14.55L14.45 7.74995ZM2.95005 16.05L14.35 22.85V23.85L6.45005 19.15V20.55L14.45 25.35V26.45L6.45005 21.75V23.15L14.45 27.95L22.55 23.05V17.85L25.95 15.85V25.85L14.45 32.75L2.95005 25.95V16.05Z"
-                  fill="black" />
-              </g>
-              <defs>
-                <clipPath id="clip0_60288_1035">
-                  <rect width="28" height="35" fill="white" transform="translate(0.5 0.5)" />
-                </clipPath>
-              </defs>
+            <svg class="copyright__icon-logo" width="29" height="36">
+              <use xlink:href="img/sprite.svg#icon-logo"></use>
             </svg>
           </a>
         </div>

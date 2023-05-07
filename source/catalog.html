@@ -56,10 +56,10 @@
       </section>
       <section class="media">
         <div class="media__wrapper">
-          <div class="slogan">
+          <div class="slogan slogan--inner">
             <header class="slogan__header">
-              <h2 class="slogan__title">Фото и видео</h2>
-              <p class="slogan__description">Не можете решиться на путешествия из-за курса? Фотографии помогут вам
+              <h2 class="slogan__title slogan__title--inner">Фото и видео</h2>
+              <p class="slogan__description slogan__description--inner">Не можете решиться на путешествия из-за курса? Фотографии помогут вам
                 забыть
                 о
                 политике и экономике</p>
@@ -69,8 +69,9 @@
             <li class="media__item">
               <a class="media__photo-link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/sunrise-desktop.jpg 1x, img/sunrise-desktop2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/sunrise-tablet.jpg 1x, img/sunrise-tablet2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/sunrise-desktop.jpg 1x, img/sunrise-desktop2x.jpg 2x" height="400">
+                  <source media="(min-width: 768px)" srcset="img/sunrise-tablet.jpg 1x, img/sunrise-tablet2x.jpg 2x" height="400">
+                  <source type="image/webp" srcset="img/sunrise-mobile.webp 1x, img/sunrise-mobile2x.webp 2x">
                   <img class="media__photo media__photo--sunrise" src="img/sunrise-mobile.jpg"
                     srcset="img/sunrise-mobile2x.jpg 2x" width="280" height="280" alt="Фото дороги на закате">
                 </picture>
@@ -90,8 +91,8 @@
             <li class="media__item">
               <a class="media__photo-link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/nature-desktop.jpg 1x, img/nature-desktop2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/nature-tablet.jpg 1x, img/nature-tablet2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/nature-desktop.jpg 1x, img/nature-desktop2x.jpg 2x" height="267">
+                  <source media="(min-width: 768px)" srcset="img/nature-tablet.jpg 1x, img/nature-tablet2x.jpg 2x" height="267">
                   <img class="media__photo media__photo--nature" src="img/nature-mobile.jpg"
                     srcset="img/nature-mobile2x.jpg 2x" width="280" height="280" alt="Фото растительности">
                 </picture>
@@ -111,9 +112,9 @@
               <a class="media__photo-link" href="#">
                 <picture>
                   <source media="(min-width: 1200px)"
-                    srcset="img/road-forest-desktop.jpg 1x, img/road-forest-desktop2x.jpg 2x">
+                    srcset="img/road-forest-desktop.jpg 1x, img/road-forest-desktop2x.jpg 2x" height="267">
                   <source media="(min-width: 768px)"
-                    srcset="img/road-forest-tablet.jpg 1x, img/road-forest-tablet2x.jpg 2x">
+                    srcset="img/road-forest-tablet.jpg 1x, img/road-forest-tablet2x.jpg 2x" height="267">
                   <img class="media__photo media__photo--forest" src="img/road-forest-mobile.jpg"
                     srcset="img/road-forest-mobile2x.jpg 2x" width="280" height="280" alt="Фото дороги в лесу">
                 </picture>
@@ -132,10 +133,10 @@
             <li class="media__item">
               <a class="media__photo-link" href="#">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/bridge-desktop.jpg 1x, img/bridge-desktop2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/bridge-tablet.jpg 1x, img/bridge-tablet2x.jpg 2x">
-                  <img class="media__photo media__photo--rock" src="img/rock-bridge-mobile.jpg"
-                    srcset="img/rock-bridge-mobile2x.jpg 2x" width="280" height="280" alt="Фото моста дьявола">
+                  <source media="(min-width: 1200px)" srcset="img/bridge-desktop.jpg 1x, img/bridge-desktop2x.jpg 2x" height="267">
+                  <source media="(min-width: 768px)" srcset="img/bridge-tablet.jpg 1x, img/bridge-tablet2x.jpg 2x" height="267">
+                  <img class="media__photo media__photo--rock" src="img/rock-bridge-media-mobile.jpg"
+                    srcset="img/rock-bridge-media-mobile2x.jpg 2x" width="280" height="280" alt="Фото моста дьявола">
                 </picture>
               </a>
               <div class="media__item-wrapper">
@@ -154,12 +155,12 @@
       </section>
       <section class="movie">
         <h2 class="visually-hidden">Ролик о Седоне</h2>
-        <p class="movie__title">Вы ещё сомневаетесь?</p>
-        <p class="movie__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+        <p class="movie__title">Всё ещё сомневаетесь?</p>
+        <p class="movie__description">Смотрите видеопрезентацию и скорее за билетами, пока они <br> не подорожали в очередной
           раз!</p>
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/movie-desktop.jpg 1x, img/movie-desktop2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/movie-tablet.jpg 1x, img/movie-tablet2x.jpg 2x">
+          <source media="(min-width: 1200px)" srcset="img/movie-desktop.jpg 1x, img/movie-desktop2x.jpg 2x" height="500">
+          <source media="(min-width: 768px)" srcset="img/movie-tablet.jpg 1x, img/movie-tablet2x.jpg 2x" height="500">
           <img class="movie__photo" src="img/movie-mobile.jpg" srcset="img/movie-mobile2x.jpg 2x" width="280" height="176" alt="Обложка ролика про Седону">
         </picture>
         <button class="movie__button" type="button">
@@ -168,8 +169,8 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <p class="main-footer__slogan slogan">
+      <div class="main-footer__wrapper main-footer__wrapper--inner">
+        <p class="main-footer__slogan main-footer__slogan--inner slogan">
           <a class="slogan__link" href="#"> #VISITSEDONA </a>
         </p>
         <div class="main-footer__social social">
@@ -194,17 +195,8 @@
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">Разработано:</p>
-            <svg width="29" height="36" viewBox="0 0 29 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_60288_1035)">
-                <path
-                  d="M14.65 0.949951H14.55L1.05005 2.34995V27.05L14.55 35.0499L27.95 27.05V2.34995L14.65 0.949951ZM26.05 13.05L14.55 6.24995V6.14995H14.45L14.35 6.04995V6.14995L2.95005 13.05V4.04995L14.45 2.84995L26.05 4.04995V13.05ZM14.45 7.74995L25.95 14.45L21.45 17.05L14.35 12.85V14.25L20.25 17.75L19.35 18.25L14.35 15.25V16.65L18.15 18.95L17.35 19.45L14.35 17.65V19.05L16.25 20.15L14.45 21.25L3.05005 14.55L14.45 7.74995ZM2.95005 16.05L14.35 22.85V23.85L6.45005 19.15V20.55L14.45 25.35V26.45L6.45005 21.75V23.15L14.45 27.95L22.55 23.05V17.85L25.95 15.85V25.85L14.45 32.75L2.95005 25.95V16.05Z"
-                  fill="black" />
-              </g>
-              <defs>
-                <clipPath id="clip0_60288_1035">
-                  <rect width="28" height="35" fill="white" transform="translate(0.5 0.5)" />
-                </clipPath>
-              </defs>
+            <svg class="copyright__icon-logo" width="29" height="36">
+              <use xlink:href="img/sprite.svg#icon-logo"></use>
             </svg>
           </a>
         </div>

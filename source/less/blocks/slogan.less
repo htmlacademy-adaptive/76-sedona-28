@@ -1,14 +1,18 @@
 .slogan {
   background-color: @color-white;
-  padding: 32px 18px;
+  padding: 34px 18px 33px 18px;
 
   @media (min-width: @tablet-width) {
-    padding: 48px 124px 56px 124px;
+    padding: 51px 124px 56px 124px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 59px 357px 44px 359px;
+    padding: 60px 360px 44px 356px;
   }
+}
+
+.slogan--inner {
+  padding: 66px 18px;
 }
 
 .slogan__title {
@@ -25,6 +29,45 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .slogan__title {
+    margin-bottom: 37px;
+  }
+
+  .slogan__title--inner {
+    margin-bottom: 26px;
+  }
+
+  .slogan--inner {
+    padding: 38px 18px 36px 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slogan__title br {
+    display: none;
+  }
+
+  .slogan__description--inner {
+    padding: 0 144px;
+  }
+
+  .slogan--inner-form {
+    padding: 66px 18px 110px 18px;
+  }
+
+  .slogan__title--inner {
+    padding-bottom: 32px;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .slogan__title--inner-form {
+    padding-bottom: 19px;
   }
 }
 
@@ -35,8 +78,25 @@
   margin: 0;
 }
 
-
 .slogan__link {
   color: @color-title;
   text-decoration: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slogan--inner {
+    padding: 100px 18px 88px 18px;
+  }
+
+  .slogan--inner-form {
+    padding: 116px 18px 70px 18px;
+  }
+
+  .slogan__title--inner-form {
+    padding-bottom: 31px;
+  }
+
+  .slogan__description--inner {
+    padding: 0 360px;
+  }
 }
