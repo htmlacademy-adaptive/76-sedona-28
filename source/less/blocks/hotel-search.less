@@ -2,6 +2,7 @@
   background-color: @color-white;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
 }
 
 .hotel-search__title {
@@ -25,6 +26,25 @@
   max-width: 284px;
   margin: 0 auto;
   margin-bottom: 49px;
+}
+
+.hotel-search__map {
+  position: relative;
+  z-index: 1;
+}
+
+.hotel-search__map--marker::before {
+  background-image: url("../img/map-marker.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+  background-position: center;
+  bottom: 168px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 3;
+  content: "";
 }
 
 @media (max-width: @mobile-width-only) {

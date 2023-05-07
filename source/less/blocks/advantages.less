@@ -22,7 +22,8 @@
     background-repeat: no-repeat;
   }
 
-  .advantages__item-bonus-description br {
+  .advantages__item-bonus-description br,
+  .advantages__description--show {
     display: none;
   }
 }
@@ -305,8 +306,13 @@
   }
 
   .advantages__description--mobile,
-  .advantages__description--desktop {
+  .advantages__description--desktop,
+  .advantages__description--show {
     display: none;
+  }
+
+  .advantages__description--tablet {
+    display: block;
   }
 
   .advantages__list-nopicture {
@@ -319,10 +325,6 @@
   .advantages__wrapper-picture--reverse {
     display: flex;
     flex-direction: row-reverse;
-  }
-
-  .advantages__title--tablet {
-    display: inline-block;
   }
 }
 

@@ -308,6 +308,24 @@ textarea.form__input {
     right: 0;
   }
 
+  .form__fieldset--checked::before {
+    content: "";
+    border: solid 1px @border-color;
+    width: 123px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
+
+  .form__fieldset--checked::after {
+    content: "";
+    border: solid 1px @border-color;
+    width: 123px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+
   .form__list {
     display: flex;
     flex-wrap: wrap;
@@ -422,6 +440,18 @@ textarea.form__input {
     width: 280px;
     right: -5px;
     top: 11px;
+  }
+
+  .form__fieldset--checked::before {
+    width: 280px;
+    top: 25px;
+    left: 0;
+  }
+
+  .form__fieldset--checked::after {
+    width: 280px;
+    top: 25px;
+    right: 0;
   }
 
   .form__list {
