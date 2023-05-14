@@ -1,14 +1,14 @@
 .promo {
   background-image: url("../img/mobile-divider.svg"), url("../img/main-promo.jpg");
-  background-position: bottom -167px center, center;
+  background-position: bottom center, center;
   background-repeat: no-repeat;
-  background-size: 320px 390px;
+  background-size: 320px 57px, 320px 390px;
   padding: 89px 19px 85px 19px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/tablet-divider.svg"), url("../img/bg-tablet.jpg");
-    background-position: bottom -232px center, center;
-    background-size: 768px 518px;
+    background-position: bottom center, center;
+    background-size: 768px 57px, 768px 518px;
     padding: 75px 154px 91px 154px;
 
     @media (min-resolution: 2dppx) {
@@ -18,8 +18,8 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/desktop-divider.svg"), url("../img/bg-desktop.jpg");
-    background-position: bottom -230px center, center;
-    background-size: 1200px 517px;
+    background-position: bottom center, center;
+    background-size: 1200px 57px, 1200px 517px;
     padding: 78px 370px 90px 370px;
 
     @media (min-resolution: 2dppx) {
@@ -30,9 +30,9 @@
 
 .promo--inner {
   background-image: url("../img/mobile-divider.svg"), url("../img/catalog-mobile.jpg");
-  background-position: bottom -167px center, center;
+  background-position: bottom -1px center, center;
   background-repeat: no-repeat;
-  background-size: 320px 390px, 320px 170px;
+  background-size: 320px 57px, 320px 170px;
   max-height: 158px;
   padding: 52px 19px 89px 19px;
 
@@ -43,8 +43,8 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/tablet-divider.svg"), url("../img/catalog-tablet.jpg");
-    background-position: bottom -232px center, center;
-    background-size: 768px 518px;
+    background-position: bottom -1px center, center;
+    background-size: 768px 57px, 768px 518px;
     max-height: 290px;
 
     @media (min-resolution: 2dppx) {
@@ -54,8 +54,8 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/desktop-divider.svg"), url("../img/catalog-desk.jpg");
-    background-position: bottom -231px center, center;
-    background-size: 1200px 518px;
+    background-position: bottom center, center;
+    background-size: 1200px 57px, 1200px 518px;
     max-height: 300px;
     padding: 59px 19px 89px 19px;
 
@@ -69,6 +69,12 @@
   margin: 0 auto;
   display: block;
 }
+.promo__logo--inner {
+  width: 230px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+}
 
 @media (min-width: @tablet-width) {
   .promo__logo {
@@ -76,10 +82,16 @@
     height: 350px;
   }
 
-  .promo--inner .promo__logo {
-    width: 461px;
+  .promo--inner {
     height: 350px;
-    padding-bottom: 190px;
+  }
+
+  .promo__logo--inner {
+    width: 461px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
   }
 }
 
@@ -89,8 +101,15 @@
     height: 350px;
   }
 
-  .promo--inner .promo__logo {
-    width: 461px;
+  .promo--inner {
     height: 350px;
+  }
+
+  .promo__logo--inner {
+    width: 461px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
   }
 }
