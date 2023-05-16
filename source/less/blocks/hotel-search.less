@@ -47,6 +47,10 @@
   content: "";
 }
 
+.hotel-search__map-wrapper {
+  display: none;
+}
+
 @media (max-width: @mobile-width-only) {
   .hotel-search__description--tablet {
     display: none;
@@ -83,6 +87,11 @@
   .hotel-search__map {
     width: 768px;
   }
+
+  .hotel-search iframe {
+    width: 768px;
+    height: 350px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -109,5 +118,10 @@
     max-width: 458px;
     padding: 17px 136px;
     margin-bottom: 64px;
+  }
+
+  .hotel-search iframe {
+    width: 1200px;
+    height: 350px;
   }
 }
